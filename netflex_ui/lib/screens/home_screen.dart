@@ -3,6 +3,7 @@ import 'package:netflex_ui/data/data.dart';
 import 'package:netflex_ui/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {  
+  const HomeScreen({Key key}) : super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -51,6 +52,7 @@ double _scrollOffset = 0.0;
           padding: const EdgeInsets.only(top: 20),
           sliver: SliverToBoxAdapter(
             child: Previews(
+              key: PageStorageKey('previews'),
               title: 'Previews',
               contentList: previews,
             ),
@@ -59,6 +61,7 @@ double _scrollOffset = 0.0;
 
         SliverToBoxAdapter(
           child: ContentList(
+            key: PageStorageKey('myList'),
             title: 'My List',
             contentList: myList,
           ),
@@ -66,6 +69,7 @@ double _scrollOffset = 0.0;
 
         SliverToBoxAdapter(
           child: ContentList(
+            key: PageStorageKey('originals'),
             title: 'Netflix Orignals',
             contentList: originals,
             isOrignals: true,
@@ -76,6 +80,7 @@ double _scrollOffset = 0.0;
           padding: const EdgeInsetsDirectional.only(bottom: 20.0),
           sliver: SliverToBoxAdapter(
           child: ContentList(
+            key: PageStorageKey('trending'),
             title: 'Trending',
             contentList: trending,
           ),

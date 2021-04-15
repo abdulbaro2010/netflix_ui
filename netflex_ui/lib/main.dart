@@ -15,7 +15,7 @@ void main() {
          visualDensity: VisualDensity.adaptivePlatformDensity,
          scaffoldBackgroundColor: Colors.black,
        ),
-       home: HomeScreen(),
+       home: NavScreen(),
        
      );
    }
